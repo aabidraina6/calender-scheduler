@@ -1,0 +1,55 @@
+.icon:hover {
+  cursor: pointer;
+}
+
+.navbar-item.active {
+  border-bottom: 2px solid blue;
+}
+
+.search-input {
+  position: relative;
+  border-radius: 25px;
+}
+
+.search-input .form-outline::before {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  color: #495057;
+  content: "\f002";
+  font-family: "FontAwesome";
+}
+
+.sec-navbar-item.active {
+  color: black;
+  background-color: #e5e8ff;
+  border-radius: 9px;
+}
+
+.custom-button {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.custom-button:hover {
+  background-color: #c2185b;
+}
+
+.fc-myCustomButton-button.fc-button.fc-button-primary {
+  background-color: #5364ff;
+  border-radius: 20px;
+}
+
+.current-date-header {
+  
+}
+
+
+
