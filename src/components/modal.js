@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import {useNavigate} from 'react-router-dom'
 import {
   MDBBtn,
   MDBModal,
@@ -15,9 +14,6 @@ import DateRangePickerComponent from "./dateRangePicker";
 
 export default function InputModal(props) {
   const toggleShow = () => props.setshow(!props.show);
-  const openDateRange = ()=>{
-    
-  }
 
   return (
     <>
@@ -26,7 +22,7 @@ export default function InputModal(props) {
         setShow={props.setshow}
         tabIndex="-1"
         staticBackdrop
-        fullscreen
+        
       >
         <MDBModalDialog>
           <MDBModalContent>
@@ -100,8 +96,7 @@ export default function InputModal(props) {
                             }}
                           >
                             From
-                            {/* <DateRangePickerComponent/> */}
-                            <MDBBtn onClick={()=>{openDateRange()}}>Select Date Range</MDBBtn>
+                        <DateRangePickerComponent show= {props.show} setshow = {props.setshow}/>
                           </label>
                         </div>
                       </div>
