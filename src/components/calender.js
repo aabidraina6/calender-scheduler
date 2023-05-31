@@ -8,6 +8,7 @@ import InputModal from "./modal";
 function Calendar() {
   const handleButtonClick = () => {
     console.log("here is the button");
+    setShowModal(true)
   };
 
   const [showModal , setShowModal] = useState(false)
@@ -65,6 +66,9 @@ function Calendar() {
 
           },
         }}
+      />
+      <InputModal
+      show = {showModal} setshow = {setShowModal}
       />
     </div>
   );
