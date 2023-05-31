@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {useNavigate} from 'react-router-dom'
 import {
   MDBBtn,
   MDBModal,
@@ -14,6 +15,9 @@ import DateRangePickerComponent from "./dateRangePicker";
 
 export default function InputModal(props) {
   const toggleShow = () => props.setshow(!props.show);
+  const openDateRange = ()=>{
+    
+  }
 
   return (
     <>
@@ -22,6 +26,7 @@ export default function InputModal(props) {
         setShow={props.setshow}
         tabIndex="-1"
         staticBackdrop
+        fullscreen
       >
         <MDBModalDialog>
           <MDBModalContent>
@@ -40,7 +45,14 @@ export default function InputModal(props) {
                     <div className="details personal">
                       <div className="fields1">
                         <div className="input-field">
-                          <label style={{display : 'inline-block' , textAlign : 'left'}}>Period Name</label>
+                          <label
+                            style={{
+                              display: "inline-block",
+                              textAlign: "left",
+                            }}
+                          >
+                            Period Name
+                          </label>
                           <input
                             type="text"
                             placeholder="Period name"
@@ -52,21 +64,14 @@ export default function InputModal(props) {
                     <div className="details ID">
                       <div className="fields">
                         <div className="input-field">
-                          <label>Start  Time</label>
-                          <input
-                            type="time"
-                            required
-                          />
+                          <label>Start Time</label>
+                          <input type="time" required />
                         </div>
                         <div className="input-field">
                           <label>End Time</label>
-                          <input
-                            type="time"
-                            required
-                          />
+                          <input type="time" required />
                         </div>
-                        
-                        
+
                         <div className="input-field">
                           <label>Issued Date</label>
                           <input
@@ -84,10 +89,24 @@ export default function InputModal(props) {
                           />
                         </div>
                       </div>
-                     
+                    </div>
+                    <div className="details personal">
+                      <div className="fields1">
+                        <div className="input-field">
+                          <label
+                            style={{
+                              display: "inline-block",
+                              textAlign: "left",
+                            }}
+                          >
+                            From
+                            {/* <DateRangePickerComponent/> */}
+                            <MDBBtn onClick={()=>{openDateRange()}}>Select Date Range</MDBBtn>
+                          </label>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  
                 </form>
               </div>
             </MDBModalBody>
